@@ -56,14 +56,6 @@ ITRseqs <- bind_rows(lapply(c(1:numFragments), function(x){
 
 readr::write_tsv(ITRseqs, 'simulatedITRs.tsv')
 
-
-
-
-i <- Biostrings::vcountPattern('TGCTA', R1@sread)
-# Remove TGCTAGAGATTTTC
-
-o <- stringr::str_extract(as.character(I1@id), '\\d+_chr[\\d+XY]+')
-
 i <- 1
 ITRseqs$id <- NA
 
